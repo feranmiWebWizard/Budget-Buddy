@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Outfit&family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Outfit&family=Sofia+Sans+Condensed&family=Young+Serif&display=swap");
+
+.numbers {
+  font-family: "Sofia Sans Condensed", sans-serif;
+}
+.headerText {
+  font-family: "Young Serif", serif;
+}
