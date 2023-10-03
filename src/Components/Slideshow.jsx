@@ -58,7 +58,7 @@ function Slideshow({ cards }) {
         </section>
       </div>
       <div className="flex flex-col gap-3 items-center">
-        <section className="bg-green-3 px-4 py-8 rounded-[1rem] shadow-lg shadow-black max-w-[21rem] md:hidden">
+        <section className="bg-green-3 text-blue-1 px-4 py-8 rounded-[1rem] shadow-lg shadow-black max-w-[21rem] md:hidden">
           <h1 className="headerText text-2xl mb-2">
             {cards[currentIndex].title}
           </h1>
