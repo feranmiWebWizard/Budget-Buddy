@@ -33,9 +33,9 @@ function Navbar() {
         </span>
       </div>
       {/* navigation links and menu items go here */}
-      <div className="md:flex md:items-center mx-3">
+      <div className="md:flex md:items-center ml-3">
         <ul
-          className={`bg-green-1 w-full md:w-auto md:text-2xl text-lg md:flex md:items-center md:py-0 py-4 md:pl-0 pl-7 z-[1] md:z-auto md:static absolute left-0 md:opacity-100 ${
+          className={`bg-green-1 w-full md:w-auto text-lg md:text-lg lg:text-2xl  md:flex md:items-center md:py-0 py-4 md:pl-0 pl-7 z-[1] md:z-auto md:static absolute left-0 md:opacity-100 ${
             menuState === "menu"
               ? "top-[-400px] opacity-0"
               : "top-[80px] opacity-100"
@@ -76,6 +76,15 @@ function Navbar() {
               to=""
             >
               Contact
+            </Link>
+          </li>
+          <li className="bg-blue-1 text-cream-1 hover:text-blue-1 hover:bg-cream-1 px-5 py-4 rounded-l-[2rem] my-6 md:my-0 ">
+            <Link
+              onClick={closeMenu}
+              className=" transition duration-300"
+              to="/sign-in"
+            >
+              Sign in
             </Link>
           </li>
         </ul>

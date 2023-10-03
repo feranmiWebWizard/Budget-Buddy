@@ -46,7 +46,7 @@ function Home() {
             powerful platform that empowers you to take control of your money
             effortlessly.
           </p>
-          <button className="bg-blue-1 text-white text-xl px-8 py-3 mr-2 mt-4 hover:bg-white hover:text-blue-1 transition ease-in-out delay-150">
+          <button className="bg-blue-1 text-white rounded-[1rem] text-xl px-8 py-3 mr-2 mt-4 hover:bg-white hover:text-blue-1 transition ease-in-out delay-150">
             Sign Up
           </button>
         </section>
