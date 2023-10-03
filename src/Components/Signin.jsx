@@ -1,3 +1,5 @@
+import LoginImg from "../assets/Images/login-page.png";
+
 function SignIn() {
   return (
     <>
@@ -8,6 +10,7 @@ function SignIn() {
             <span className="text-green-1 text-5xl">Budget Buddy</span>
           </h1>
           <p className="">Sign in to continue to your account.</p>
+          <img src={LoginImg} alt="two people having a conversation" />
         </section>
         <div className="flex flex-col col-span-2 place-self-center py-4 ">
           <div className="flex flex-col gap-4 px-2">
