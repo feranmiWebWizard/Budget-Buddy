@@ -3,7 +3,7 @@ import LoginImg from "../assets/Images/login-page.png";
 function SignIn() {
   return (
     <>
-      <div className="bg-cream-1 text-lg flex flex-col md:grid grid-cols-3 min-h-[100vh] px-2">
+      <div className="bg-cream-1 text-lg flex flex-col md:grid grid-cols-3 min-h-[100vh] px-2 md:px-0">
         <section className="bg-blue-1 text-cream-1 hidden md:flex flex-col justify-center px-4">
           <h1 className="headerText text-4xl">
             Welcome Back to <br />
