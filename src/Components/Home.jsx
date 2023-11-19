@@ -40,7 +40,7 @@ function Home() {
           <h1 className="headerText text-3xl md:text-5xl mb-4">
             Budget Buddy: Your Financial Companion
           </h1>
-          <p className="text-blue-1 text-lg md:text-xl">
+          <p className="text-blue-1 text-lg md:text-xl font-semibold">
             We understand that managing your finances effectively is essential
             for a secure and stress-free future. That's why we've created a
             powerful platform that empowers you to take control of your money

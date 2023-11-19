@@ -11,10 +11,12 @@ function App() {
     <>
       <Navbar />
       <ScrollToTop />
-      <Routes>
-        <Route path="/sign-in" element={<SignIn />}></Route>
-        <Route path="/" element={<Home />}></Route>
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/sign-in" element={<SignIn />}></Route>
+          <Route path="/" element={<Home />}></Route>
+        </Routes>
+      </main>
     </>
   );
 }

@@ -1,9 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Outfit&family=Young+Serif&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Outfit&family=Sofia+Sans+Condensed&family=Young+Serif&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
 .numbers {
   font-family: "Sofia Sans Condensed", sans-serif;
 }
 .headerText {
   font-family: "Young Serif", serif;
+}
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+.instructions {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.hide {
+  display: none;
+}
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
 }
