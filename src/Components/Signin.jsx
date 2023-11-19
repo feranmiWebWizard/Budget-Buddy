@@ -67,8 +67,6 @@ function SignIn() {
           withCredentials: true,
         }
       );
-      console.log(response.data);
-      console.log(JSON.stringify(response));
       setSuccess(true);
       console.log(success);
       setPassword("");
