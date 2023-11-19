@@ -6,10 +6,13 @@ import {
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from "../api/Axios";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordRegex =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+const REGISTER_URL = "/createUser";
 
 function SignIn() {
   const userRef = useRef();
@@ -44,6 +47,40 @@ function SignIn() {
     setErrMsg("");
   }, [user, password]);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const v1 = emailRegex.test(user);
+    const v2 = passwordRegex.test(password);
+
+    if (!v1 || !v2) {
+      setErrMsg("Invalid Entry");
+      return;
+    }
+
+    try {
+      const response = await axios.post(
+        REGISTER_URL,
+        JSON.stringify({ email: user, password }),
+        {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true,
+        }
+      );
+      console.log(response.data);
+      console.log(JSON.stringify(response));
+      setSuccess(true);
+      console.log(success);
+      setPassword("");
+      setUser("");
+    } catch (err) {
+      if (!err?.response) {
+        setErrMsg("No server response");
+        console.log(errMsg);
+      }
+    }
+  };
+
   return (
     <section className="bg-cream-1 text-lg flex flex-col justify-center md:grid grid-cols-3 min-h-[90vh] px-4 md:px-0">
       <section className="bg-blue-1 text-cream-1 hidden md:flex flex-col justify-center px-4">
@@ -72,7 +109,7 @@ function SignIn() {
           <span className="mx-auto"> Continue with Google</span>
         </button>
         <hr />
-        <form className="flex flex-col gap-5 mt-5">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-5 mt-5">
           <label htmlFor="email">
             Email Address:
             <span className={validName ? "valid" : "hide"}>
@@ -145,8 +182,8 @@ function SignIn() {
             character
           </p>
           <button
-            className="bg-blue-1 rounded-[0.5rem] text-cream-1 border-2 border-blue-1 py-3 hover:bg-cream-1 hover:text-blue-1"
-            type="submit"
+            disabled={!validName || !validPassword ? true : false}
+            className="bg-blue-1 rounded-[0.5rem] text-cream-1 border-2 border-blue-1 py-3"
           >
             Sign In
           </button>
