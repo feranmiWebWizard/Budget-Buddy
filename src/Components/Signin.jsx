@@ -121,6 +121,7 @@ function SignIn() {
             className="bg-cream-1 border-2 border-gray-400 rounded-[0.5rem] h-[3.5rem] px-3 hover:bg-white focus:bg-white"
             type="email"
             id="email"
+            value={user}
             ref={userRef}
             autoComplete="off"
             onChange={(e) => {
@@ -157,6 +158,7 @@ function SignIn() {
             className="bg-cream-1 border-2 border-gray-400 rounded-[0.5rem] h-[3.5rem] px-3 hover:bg-white focus:bg-white"
             type="password"
             id="password"
+            value={password}
             onChange={(e) => {
               setPassword(e.target.value);
             }}
