@@ -82,9 +82,9 @@ function Navbar() {
             <Link
               onClick={closeMenu}
               className=" transition duration-300"
-              to="/create-user"
+              to="/sign-in"
             >
-              Create User
+              Log in
             </Link>
           </li>
         </ul>

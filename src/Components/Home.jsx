@@ -1,6 +1,7 @@
 import headerImage from "../assets/Images/Spreadsheets-bro.png";
 import arrowImage from "../assets/Images/arrow-up.png";
 import Slideshow from "./Slideshow";
+import { Link } from "react-router-dom";
 
 function Home() {
   const cards = [
@@ -36,7 +37,7 @@ function Home() {
   return (
     <>
       <div className="bg-green-2 text-cream-1 border-[1rem] border-green-1 px-4 py-5 lg:flex justify-center items-center">
-        <section className="max-w-[40rem]">
+        <section className="max-w-[40rem] flex flex-col items-start">
           <h1 className="headerText text-3xl md:text-5xl mb-4">
             Budget Buddy: Your Financial Companion
           </h1>
@@ -46,9 +47,13 @@ function Home() {
             powerful platform that empowers you to take control of your money
             effortlessly.
           </p>
-          <button className="bg-blue-1 text-white rounded-[1rem] text-xl px-8 py-3 mr-2 mt-4 hover:bg-white hover:text-blue-1 transition ease-in-out delay-150">
-            Sign Up
-          </button>
+
+          <Link
+            className=" bg-blue-1 text-white rounded-[1rem] text-xl px-8 py-3 mr-2 mt-4 hover:bg-white hover:text-blue-1 transition ease-in-out delay-150"
+            to="/create-user"
+          >
+            Create User
+          </Link>
         </section>
         <img
           src={headerImage}
