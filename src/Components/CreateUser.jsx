@@ -1,5 +1,6 @@
 import LoginImg from "../assets/Images/login-page.png";
 import { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   faCheck,
   faTimes,
@@ -7,14 +8,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "../api/Axios";
+import SignIn from "./Signin";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordRegex =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-const REGISTER_URL = "/login";
+const REGISTER_URL = "/createUser";
 
-function SignIn() {
+function CreateUser() {
   const userRef = useRef();
   const errRef = useRef();
 
@@ -86,7 +88,7 @@ function SignIn() {
     <section className="bg-cream-1 text-lg flex flex-col justify-center md:grid grid-cols-3 min-h-[90vh] px-4 md:px-0">
       <section className="bg-blue-1 text-cream-1 hidden md:flex flex-col justify-center px-4">
         <h1 className="headerText text-4xl">
-          Welcome Back to <br />
+          Create your account <br />
           <span className="text-green-1 text-5xl">Budget Buddy</span>
         </h1>
         <p className=""> Start your journey, Create an account today!</p>
@@ -188,12 +190,18 @@ function SignIn() {
             disabled={!validName || !validPassword ? true : false}
             className="bg-blue-1 rounded-[0.5rem] text-cream-1 border-2 border-blue-1 py-3"
           >
-            Sign In
+            Create Account
           </button>
         </form>
+        <p>
+          Already have an account?
+          <Link className="pl-[1rem]" to="/sign-in">
+            sign in
+          </Link>
+        </p>
       </section>
     </section>
   );
 }
 
-export default SignIn;
+export default CreateUser;
