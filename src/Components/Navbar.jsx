@@ -54,7 +54,7 @@ function Navbar() {
             <Link
               onClick={closeMenu}
               className=" hover:text-blue-1 transition duration-300"
-              to="/"
+              to="/coming-soon"
             >
               Learn
             </Link>
@@ -64,7 +64,7 @@ function Navbar() {
             <Link
               onClick={closeMenu}
               className=" hover:text-blue-1 transition duration-300"
-              to=""
+              to="/dashboard"
             >
               About
             </Link>
@@ -73,7 +73,7 @@ function Navbar() {
             <Link
               onClick={closeMenu}
               className=" hover:text-blue-1 transition duration-300"
-              to=""
+              to="/coming-soon"
             >
               Contact
             </Link>
